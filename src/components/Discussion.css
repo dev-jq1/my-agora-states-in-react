@@ -1,0 +1,42 @@
+.discussion__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 540px;
+}
+
+.discussion__avatar--image {
+    width: 60px;
+    border-radius: 50%;
+}
+
+.discussion__content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px;
+    height: 80px;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.discussion__title {
+    text-align: left;
+    margin: 0;
+}
+
+.discussion__information {
+    text-align: right;
+    font-size: 10pt;
+}
+
+.discussion__answered p {
+    font-size: 20pt;
+}
+
+li {
+    list-style: none;
+    border-radius: 15px;
+    background-color: white;
+    padding: 0px 10px;
+    margin-bottom: 8px;
+}
