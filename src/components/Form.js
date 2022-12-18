@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Fragment } from "react";
 import './Form.css'
@@ -40,13 +41,16 @@ function Form({datas, reload}) {
         }
         // setNewData({...newData});
         const url = `http://localhost:4000/discussions`;
-        fetch(url, {
-            method: 'POST',
-            headers: {'content-Type' : 'application/json'},
-            body: JSON.stringify(newData)
-        })
-        .then(response => response.json())
-        .then(result => reload(result));
+        // fetch(url, {
+        //     method: 'POST',
+        //     headers: {'content-Type' : 'application/json'},
+        //     body: JSON.stringify(newData)
+        // })
+        // .then(response => response.json())
+        // .then(result => reload(result));
+
+        axios.post(url, newData)
+        .then(response => reload(response.data));
         // console.log(newData);
         setNewName('');
         setNewTitle('');
