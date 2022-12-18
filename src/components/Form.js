@@ -50,7 +50,7 @@ function Form({datas, reload}) {
         // .then(result => reload(result));
 
         axios.post(url, newData)
-        .then(response => reload(response.data));
+        .then(response => reload(response.data)); //axios 를 쓰면 결과값에 data를 붙여줘야 body를 가져올 수 있다.
         // console.log(newData);
         setNewName('');
         setNewTitle('');
