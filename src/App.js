@@ -3,14 +3,19 @@ import "./App.css";
 import Form from "./components/Form";
 import Discussions from "./pages/Discussions";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 function App() {
     let [datas, setDatas] = useState();
     const getData = () => {
         const url = `http://localhost:4000/discussions`;
-        return fetch(`${url}`,{
-          method: "GET"
-        }).then((data) => data.json());
+        // return fetch(`${url}`,{
+        //   method: "GET"
+        // }).then((data) => data.json());
+        return axios.get(url).then(result => {
+            // console.log(result);
+            return result.data;
+        });
     };
 
     useEffect(() => {
