@@ -12,10 +12,7 @@ function App() {
         // return fetch(`${url}`,{
         //   method: "GET"
         // }).then((data) => data.json());
-        return axios.get(url).then(result => {
-            // console.log(result);
-            return result.data;
-        });
+        return axios.get(url).then(result => result.data);
     };
 
     useEffect(() => {
